@@ -1,0 +1,11 @@
+---
+layout: page
+description: "A simple and clean responsive Jekyll theme for words and photos."
+tags: [Jekyll, theme, themes, responsive, blog, minimalism]
+---
+
+<ul class="post-list">
+{% for post in site.posts limit:10 %} 
+  <li><article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost"><a href="{{ site.url }}{{ post.url }}"><h1>{{ post.title }}</h1> <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %B %Y" }}</time></span></a></article></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,61 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="id"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="id"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="id"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="id"><!--<![endif]-->
+<head>{% include head.html %}</head>
+<body id="post" itemscope itemtype="http://schema.org/WebPage">
+{% include browser-upgrade.html %}{% include navigation.html %}
+<div id="main" role="main" itemprop="mainContentOfPage" itemscope itemtype="http://schema.org/Blog">
+  <article class="hentry" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogpost">
+    {% if page.image.feature %}<img src="{{ site.url }}/assets/img/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}">{% endif %}
+    <div class="entry-wrapper">
+      <header class="entry-header">
+        <h1 class="entry-title" itemprop="headline">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
+      </header>
+      <footer class="entry-meta">
+        <img src="{{ site.url }}/assets/img/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
+        <span class="author vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">By <span itemprop="name" class="fn"><a href="{{ site.url }}/about" title="About {{ site.owner.name }}" itemprop="url">{{ site.owner.name }}</a></span></span>
+        <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"><i class="icon-calendar"></i> {{ page.date | date: "%d %B %Y" }}</time></span>
+        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}" itemprop="dateModified"><i class="icon-pencil"></i> {{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
+        {% if site.disqus_shortname and page.comments %}<span class="entry-comments"><i class="icon-comment-alt"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
+        <span><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}"><i class="icon-link"></i> Permalink</a></span>
+      </footer>
+      <div class="entry-content">
+        {{ content }}
+        {% if site.disqus_shortname and page.comments %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
+        <span class="entry-tags"><i class="icon-tags"></i> {% for tag in page.tags %}<a href="{{ site.url }}/tags.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</span>
+      </div><!-- /.entry-content -->
+    </div><!-- /.entry-wrapper -->
+    <nav class="pagination" role="navigation">
+        {% for post in site.categories.project %}
+          {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+          {% endif %}
+        {% endfor %}
+        {% for post in site.categories.project %}
+          {% if post_index0 == forloop.index %}
+            {% assign next_post = post.url %}
+          {% endif %}
+          {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post.url %}
+          {% endif %}
+        {% endfor %}
+        {% if prev_post %}
+          <a href="{{ site.url }}{{ prev_post }}" class="previous-link" title="Previous article"><i class="icon-2x icon-chevron-left"></i> <span>Previous</span></a>
+        {% endif %}
+          <a href="{{ site.url }}/project/" class="archive-link"><i class="icon icon-list-ul"></i> <span>Project</span></a>
+        {% if next_post %}
+          <a href="{{ site.url }}{{ next_post }}" class="next-link" title="Next article"><span>Next</span> <i class="icon-2x icon-chevron-right"></i></a>
+        {% endif %}
+    </nav><!-- /.pagination -->
+</div><!-- /#main -->
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    {% include footer.html %}
+  </footer>
+</div><!-- /.footer-wrapper -->
+{% include scripts.html %}	        
+</body>
+</html>

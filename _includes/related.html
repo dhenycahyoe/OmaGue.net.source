@@ -1,0 +1,12 @@
+{% if site.related_posts.size %}<aside class="related">
+<h3>Posting Terkait</h3>
+ <ul>{% for post in site.related_posts limit:10 %}
+  {% assign match = false %}
+   {% for category in post.categories %}
+    {% if page.categories contains category %}{% assign match = true %}{% endif %}
+   {% endfor %}
+   {% if match %}
+  <li><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}"><i class="icon icon-signout"></i> {{ post.title }}</a></li>
+  {% endif %}
+ {% endfor %}</ul>
+</aside>{% endif %}

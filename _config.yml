@@ -1,0 +1,68 @@
+title:            OmaGue.net
+description:      Cyberspace Explorers Notes
+logo:             site-logo.png
+disqus_shortname: omaguenet
+#Comment out url when working locally to resolve base urls correctly
+url:              http://localhost:4000
+
+# Owner/author information
+owner:
+  name:           dhenycahyoe
+  avatar:         bio-photo.jpg
+  email:          dheny@omague.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        dhenycahyoe
+  facebook:       DenyEkaWicahyo
+  github:         dhenycahyoe
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    https://plus.google.com/116377306809477014805/posts
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:        
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Blog
+    url: /blog
+  - title: About
+    url: /about
+  - title: Project
+    url: /project
+  - title: Blogazine
+    url: http://omague.com
+    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Asia/Jakarta
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec"]
