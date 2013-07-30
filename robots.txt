@@ -1,0 +1,7 @@
+---
+layout: nil
+---
+User-agent: *
+Disallow: 
+
+Sitemap: http://omague.net/sitemap.xml 

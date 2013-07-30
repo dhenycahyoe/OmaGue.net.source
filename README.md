@@ -4,7 +4,7 @@
 ## Basic Setup for new Jekyll site
 
 1. [Install Jekyll](http://jekyllrb.com) and read through the documentation if you haven't already.
-2. Fork the [OmaGue.net repo](https://github.com/dhenycahyoe/dhenycahyoe.github.io/fork)
+2. Fork the [OmaGue.net repo](https://github.com/dhenycahyoe/OmaGue.net.source/fork)
 3. Clone the repo you just forked to your computer.
 4. Edit `_config.yml` to personalize your site.
 5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.

@@ -1,6 +1,6 @@
 title:            OmaGue.net
 description:      Cyberspace Explorers Notes
-logo:             site-logo.png
+logo:             logonet.png
 disqus_shortname: omaguenet
 #Comment out url when working locally to resolve base urls correctly
 url:              http://localhost:4000
@@ -65,4 +65,4 @@ kramdown:
     coderay_css: class
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace"]

@@ -4,12 +4,13 @@ permalink: /project/index.html
 title: Project
 headline: Last Project
 description: "An archive of posts sorted by date."
+tags: [wordpress themes, free themes, responsive, html5 themes]
 image:
   feature: default-projects.jpg
 ---
 
 <ul class="post-list">
 {% for post in site.categories.project %} 
-  <li><article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost"><a href="{{ site.url }}{{ post.url }}"><h1>{{ post.title }}</h1> <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %B %Y" }}</time></span></a></article></li>
+  <li><article itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost"><a href="{{ site.url }}{{ post.url }}"><h1 itemprop="headline">{{ post.title }}</h1> <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%d %B %Y" }}</time></span></a></article></li>
 {% endfor %}
 </ul>

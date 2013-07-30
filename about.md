@@ -2,7 +2,8 @@
 layout: page
 permalink: /about/index.html
 title: About the Author
-tags: [Jekyll, theme, simple, minimal, minimalism, responsive]
+description: "Hi my name Deny E.Wicahyo, you can call me dhenycahyoe. I come from Indonesia, I’m web designer & web developer"
+tags: [about, dhenycahyoe, Deny E Wicahyo]
 image:
   feature: default-head.jpg
 ---
