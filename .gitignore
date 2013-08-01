@@ -3,3 +3,4 @@ _site
 *.sublime-project
 *.sublime-workspace
 codekit-config.json
+_site/css/main.css

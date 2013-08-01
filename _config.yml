@@ -1,5 +1,5 @@
 title:            OmaGue.net
-description:      Cyberspace Explorers Notes
+description:      Cyberspace Explorers Note&lsquo;s
 logo:             logonet.png
 disqus_shortname: omaguenet
 #Comment out url when working locally to resolve base urls correctly
@@ -23,10 +23,10 @@ owner:
   google_plus:    https://plus.google.com/116377306809477014805/posts
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
-google_verify:      
+google_analytics:   UA-41778089-1
+google_verify:      k3o70s7u4ZamnjJLDj34TkDw47kNdJyb71_eItSpzYg
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
+bing_verify:        08AE8D06327850A444D05E1440290A58
 
 # Links to include in top navigation
 # For external links add external: true

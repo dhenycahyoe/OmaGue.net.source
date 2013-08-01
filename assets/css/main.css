@@ -44,7 +44,7 @@ blockquote{font-style:italic; font-size:24px; font-size:1.5rem; line-height:1; m
 tt, code, kbd, samp, pre{font-family:Monaco,Courier,MonoSpace;}
 p code{font-size:16px; font-size:1rem;margin:0 2px; padding:0 5px; border:1px solid #e6e6e6; background-color:#f2f2f2; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px}
 p code{white-space:pre-wrap; white-space:-moz-pre-wrap; white-space:-pre-wrap; white-space:-o-pre-wrap; word-wrap:break-word}
-.highlight{overflow-x:auto;font-size: 14px;font-size: 0.875rem;line-height:2;border:1px solid #dedede;}
+.highlight{overflow-x:auto;font-size: 14px;font-size: 0.875rem;line-height:2;border:1px solid #dedede;margin-bottom:15px}
 .highlight pre{position:relative;margin:0;padding:1em;}
 .hll{background-color:#ffffcc;}
 .c{color:#999988;font-style:italic;}
